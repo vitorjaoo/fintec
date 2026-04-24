@@ -208,21 +208,22 @@ else:
 
     page = st.session_state.get("page", "dashboard")
 
+    # AQUI ESTÃO AS CORREÇÕES: Imports diretos sem o "from pages"
     if page == "dashboard":
-        from pages import dashboard
+        import dashboard
         dashboard.render()
     elif page == "mes":
-        from pages import mes
+        import mes
         mes.render()
     elif page == "parcelas":
-        from pages import parcelas
+        import parcelas
         parcelas.render()
     elif page == "metas":
-        from pages import metas
+        import metas
         metas.render()
     elif page == "investimentos":
-        from pages import investimentos
+        import investimentos
         investimentos.render()
     elif page == "anual":
-        from pages import anual
+        import anual
         anual.render()
